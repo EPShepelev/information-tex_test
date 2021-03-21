@@ -1,27 +1,3 @@
-const newsExample = [
-  {
-    title: "Hello world!",
-    author: "Иван",
-    date: "07:10 11 september 1900",
-    link: "http//goto...",
-    isRead: "unread",
-  },
-  {
-    title: "Whats up",
-    author: "Андрей",
-    date: "18:45 20 july 1989",
-    link: "http//goto...",
-    isRead: "unread",
-  },
-  {
-    title: "Whose there?",
-    author: "Света",
-    date: "21:38 04 march 2011",
-    link: "http//goto...",
-    isRead: "unread",
-  },
-];
-
 fetch("http://www.json-generator.com/api/json/get/bTRegnLmXm?indent=2")
   .then((res) => {
     if (res.status >= 200 && res.status < 300) {
@@ -34,7 +10,6 @@ fetch("http://www.json-generator.com/api/json/get/bTRegnLmXm?indent=2")
   })
   .then((res) => res.json())
   .then((data) => {
-    console.log(data);
     showIcon();
     getNewsCount(data);
     data.forEach((item) => {
