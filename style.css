@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 5px 20px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.content {
+  margin-bottom: 15px;
+}
+
+.widget {
+  width: 500px;
+  border-radius: 5px;
+  background-color: blanchedalmond;
+}
+
+svg {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.widget__icon {
+  position: relative;
+}
+
+.widget__icon-count {
+  position: absolute;
+  color: #fff;
+  background-color: blue;
+  border: none;
+  border-radius: 50%;
+  width: 19px;
+  height: 19px;
+  bottom: 0;
+  left: 35px;
+  text-align: center;
+}
+
+.widget__content--hide {
+  display: none;
+}
+.widget__content--show {
+  display: block;
+}
