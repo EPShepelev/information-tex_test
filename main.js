@@ -86,8 +86,7 @@ function showNews() {
   deleteNEwsCount();
   const widgets = document.querySelectorAll(".widget__content--hide");
   widgets.forEach((item) => {
-    item.classList.remove("widget__content--hide");
-    item.classList.add("widget__content--show");
+    item.classList.toggle("widget__content--show");
   });
 }
 
