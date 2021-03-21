@@ -27,10 +27,15 @@ p {
   margin-bottom: 15px;
 }
 
+.content > p {
+  margin-bottom: 10px;
+}
+
 .widget {
   width: 500px;
   border-radius: 5px;
-  background-color: blanchedalmond;
+  background-color: #f5fcfc;
+  box-shadow: 0px 0px 2px 0px rgba(22, 39, 196, 0.75);
 }
 
 svg {
@@ -46,7 +51,7 @@ svg {
 .widget__icon-count {
   position: absolute;
   color: #fff;
-  background-color: blue;
+  background-color: #1627c4;
   border: none;
   border-radius: 50%;
   width: 19px;
@@ -61,4 +66,16 @@ svg {
 }
 .widget__content--show {
   display: block;
+  padding: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.widget__content--show:first-of-type {
+  margin-top: 10px;
+}
+
+.news-is-read {
+  background-color: #a1f57a;
+  transition: background-color 1s ease;
 }

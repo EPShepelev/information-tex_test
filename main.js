@@ -1,3 +1,5 @@
+const container = document.querySelector(".container");
+
 fetch("http://www.json-generator.com/api/json/get/bTRegnLmXm?indent=2")
   .then((res) => {
     if (res.status >= 200 && res.status < 300) {
@@ -54,27 +56,29 @@ function showIcon() {
       />
     </g>
   </svg>
+  
   <div class="widget__icon-count"></div>
 </div>`
   );
-  document.body.appendChild(icon);
+  container.appendChild(icon);
   return icon;
 }
 
 function createNewsWidget(item) {
   const widget = document.createElement("div");
   widget.classList.add("widget");
+  widget.addEventListener("click", newsIsRead);
   widget.insertAdjacentHTML(
     "afterbegin",
     `<div class="widget__content--hide">
     <h3>${item.title}</h3>
     <p>${item.autor}</p>
     <p>${item.date}</p>
-    <p><a href="${item.link}">Подробнее</a></p>
-    <div class="read">Не прочитано</div>
+    <p><a href="${item.link}" target="_blank">Подробнее</a></p>
+    <div class="unread">Не прочитано</div>
   </div>`
   );
-  document.body.appendChild(widget);
+  container.appendChild(widget);
   return widget;
 }
 
@@ -85,4 +89,9 @@ function showNews() {
     item.classList.remove("widget__content--hide");
     item.classList.add("widget__content--show");
   });
+}
+
+function newsIsRead() {
+  this.classList.add("news-is-read");
+  this.querySelector(".unread").remove();
 }
