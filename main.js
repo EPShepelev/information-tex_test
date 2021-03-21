@@ -92,7 +92,7 @@ function showNews() {
 
 function newsIsRead() {
   this.classList.add("news-is-read");
-  if (this.classList.contains("unread")) {
+  if (this.querySelector(".unread")) {
     this.querySelector(".unread").remove();
   }
 }
